@@ -38,17 +38,91 @@ span {
 
 .main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
     font-size: 25px;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
-button{
+.main button{
      font-family:'bebas_neueregular';
      font-size: 25px;
      width: 50%;
      background-color: #4CE096;
+     border-radius: 7px;
      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#dialogForm {
+    width: 400px;
+    height: 500px;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    padding: 20px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #E0964C;
+}
+
+#dialogForm::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px); /* Efecto de desenfoque opcional */
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+form input {
+   height: 35px;
+   padding: 10px;
+   border: none;
+   border-radius: 7px;
+}
+
+form input:focus {
+    border: 2px solid #E04C4C;
+    outline: none;
+}
+
+form .btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.read-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #4CE096;
+    cursor: pointer;
+}
+
+form #btnCancel {
+    font-family:'bebas_neueregular';
+    font-size: 25px;
+    border-radius: 7px;
+    width: 40%;
+    background-color: #E04C4C;
+}
+
+form #btnCreate {
+    font-family:'bebas_neueregular';
+    font-size: 25px;
+    border-radius: 7px;
+    width: 40%;
+    background-color: #4CE096;
 }
